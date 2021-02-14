@@ -32,7 +32,7 @@ def search():
             messagebox.showerror("error", "delete your old file  or contect me on insta => aashish_vishnu_yash")
         messagebox.showinfo("showinfo", f"{til}have successfully downloaded")
     else:
-        print("select formet")
+        messagebox.showerror("error", "select formet or contect me on insta => aashish_vishnu_yash")
     
 
 root =Tk()
@@ -40,12 +40,12 @@ yrl=StringVar()
 var=IntVar()
 
 root.geometry("500x250+300+50")
-root.configure(bg='lightyellow')
+root.configure(bg='blue')
 title=Label(root,text="YT DOWNLOADER BY VISHNU-YASH",font=("times new roman",15),bg='black',fg='white').pack(side="top",fill=X)
-t1=Label(root,text="URL",font=("times new roman",15)).place(x=10,y=50)
+t1=Label(root,text="URL",font=("times new roman",15),bg='blue',fg='white').place(x=10,y=50)
 e1= Entry(root,font=("times new roman",13),textvariable=yrl).place(x=120,y=50,width=340)
-R1 = Radiobutton(root, text="video formet", variable=var, value=1).place(x=10,y=75)
-R2 = Radiobutton(root, text="audio formet", variable=var, value=2).place(x=120,y=75 )
+R1 = Radiobutton(root, text="video formet", variable=var, value=1,bg='blue',fg='red',font=("times new roman",15)).place(x=10,y=75)
+R2 = Radiobutton(root, text="audio formet", variable=var, value=2,bg='blue',fg='red',font=("times new roman",15)).place(x=150,y=75 )
 b5=Button(root,text="search",command=search)
 b5.place(x=350,y=90,height=30,width=120)
 
